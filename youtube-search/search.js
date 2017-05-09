@@ -1,9 +1,12 @@
+// YouTube code created with help from 
+// https://www.codecademy.com/courses/javascript-intermediate-en-757J2/0/1
+
 // Your use of the YouTube API must comply with the Terms of Service:
 // https://developers.google.com/youtube/terms
 
 // Helper function to display JavaScript value on HTML page.
 function showResponse(response) {
-  var responseString = JSON.stringify(response, '', 2);
+  var responseString = '<pre>' + JSON.stringify(response, '', 2) + '</pre>';
   document.getElementById('response').innerHTML += responseString;
 }
 
@@ -34,7 +37,7 @@ function youtubeSearch(term) {
 
 // Called automatically with the response of the YouTube API request.
 function onSearchResponse(response) {
-    showResponse(response);
+  showResponse(response);
 }
 
 $(document).ready(function() {
